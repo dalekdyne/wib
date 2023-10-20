@@ -1,0 +1,10 @@
+import os
+
+
+class Config:
+    ZOHO_MAIL_SERVER = os.getenv("ZOHO_MAIL_SERVER")
+    ZOHO_MAIL_PORT = os.getenv("ZOHO_MAIL_PORT")
+    ZOHO_NO_REPLY_MAIL_ACCOUNT = os.getenv("ZOHO_NO_REPLY_MAIL_ACCOUNT")
+    ZOHO_NO_REPLY_MAIL_ACCOUNT_PASSWORD = os.getenv(
+        "ZOHO_NO_REPLY_MAIL_ACCOUNT_PASSWORD"
+    )

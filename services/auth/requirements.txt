@@ -1,0 +1,4 @@
+fastapi==0.75.2
+uvicorn
+pydantic
+boto3
