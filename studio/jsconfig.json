@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "baseUrl": "/studio",
+        "paths": {
+            "@/*": ["src/*"],
+            "@core/*": ["src/@core/*"],
+        }
+    }
+}
