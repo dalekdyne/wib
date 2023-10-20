@@ -1,0 +1,27 @@
+# Use an official Python runtime as a parent image
+FROM python:3.11-bullseye
+
+# Set the working directory in the Docker image
+WORKDIR /app
+
+# Copy the requirements.txt file into the container
+COPY services/mailing/requirements.txt .
+
+# Install any needed packages specified in requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Create a new user and set proper permissions
+RUN useradd -m appuser && chown -R appuser:appuser /app
+USER appuser
+
+# Copy the entire app folder into the container
+COPY --chown=appuser:appuser services/mailing/app .
+
+# Copy entry script into the container
+COPY --chown=appuser:appuser uvicorn.sh ./entrypoint.sh
+
+# Expose the port the app runs on
+EXPOSE 8000
+
+# Set the entry script as the entry point
+CMD ["/bin/sh", "-c", "./entrypoint.sh"]

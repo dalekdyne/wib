@@ -1,0 +1,30 @@
+# ---- Build Stage ----
+FROM node:16 AS build
+
+# Set the working directory
+WORKDIR /app
+
+# Copy project file
+COPY studio/package.json ./
+
+# Install all dependencies
+RUN yarn install
+
+# Copy all project files
+COPY ./studio .
+
+# Build the project
+RUN yarn build
+
+# ---- Release Stage ----
+FROM caddy:2-alpine as release
+
+# Copy output files from build stage
+COPY --from=build /app/dist /srv
+
+# Copy the Caddy start script
+COPY caddy.sh /start-caddy.sh
+RUN chmod +x /start-caddy.sh
+
+# Use the start script as the CMD
+CMD ["/bin/sh", "-c", "/start-caddy.sh"]
