@@ -27,7 +27,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
         with:
-          file: Dockerfile.backend
+          file: ci/Dockerfile.api
           context: .
           push: true
           tags: us-central1-docker.pkg.dev/getwib/getwib-api/getwib-api:latest
