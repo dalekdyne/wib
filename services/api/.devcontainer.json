@@ -1,0 +1,21 @@
+{
+    "name": "GetWib API",
+    "dockerComposeFile": [
+        "../../docker-compose.yml"
+    ],
+    "service": "api",
+    "workspaceFolder": "/workspace/services/api",
+    "postCreateCommand": [
+        "./postCreateCommand.sh"
+    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python"
+            ]
+        }
+    },
+    "forwardPorts": [
+        8000
+    ]
+}

@@ -6,6 +6,6 @@ uvloop
 httptools==0.1.0
 gunicorn
 podgen
-bson
 pymongo
 fastapi-users-db-mongodb
+fastapi-users==10.2.0

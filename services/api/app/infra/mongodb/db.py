@@ -7,9 +7,9 @@ from config import ConfigParams
 class Database:
     def __init__(self):
         self.db_client = pymongo.MongoClient(
-            ConfigParams.MONGODB_HOST, serverSelectionTimeoutMS=100000
+            ConfigParams.DATABASE_URL, serverSelectionTimeoutMS=100000
         )
-        self.db = self.db_client[ConfigParams.MONGODB_DBNAME]
+        self.db = self.db_client[ConfigParams.DATANASE_NAME]
         self.col_podcasts = self.db["podcasts"]
         self.col_episodes = self.db["episodes"]
 

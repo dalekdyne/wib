@@ -3,11 +3,9 @@ from typing import Optional
 
 import pytz
 from bson.objectid import ObjectId as BsonObjectId
-from fastapi_users_db_mongodb import UUID4
 from podgen import Episode as PodGenEpisode
 from podgen import Media
 from pydantic import BaseModel
-
 
 class PydanticObjectId(BsonObjectId):
     @classmethod
@@ -19,7 +17,6 @@ class PydanticObjectId(BsonObjectId):
         if not isinstance(v, BsonObjectId):
             raise TypeError("ObjectId required")
         return str(v)
-
 
 class PodcastEpisode(BaseModel):
     _id: PydanticObjectId
@@ -34,8 +31,6 @@ class PodcastEpisode(BaseModel):
     video: Optional[str]
     status: Optional[str]
     podcast_id: Optional[str]
-    user_id: Optional[UUID4]
-
 
 def createPodGenEpisodeFrom(episode: PodcastEpisode) -> PodGenEpisode:
     # Get UTC timezone
@@ -46,14 +41,14 @@ def createPodGenEpisodeFrom(episode: PodcastEpisode) -> PodGenEpisode:
     # then we cannot recreate the XML without breaking user experience.
     # This breaks if the id is not a string.
 
-    e.id = str(episode["_id"])
-    e.title = episode["title"]
-    e.image = episode["artwork"]
-    e.subtitle = episode["description"][:100]
-    e.summary = episode["description"][:500]
-    e.long_summary = episode["description"]
-    e.media = Media(episode["audio"])
-    e.explicit = episode["rating"] == "Explicit"
-    e.publication_date = timezone.localize(episode["release_date"])
+    e.id = str(episode._id)
+    e.title = episode.title
+    e.image = episode.artwork
+    e.subtitle = episode.description[:100] if episode.description else ""
+    e.summary = episode.description[:500] if episode.description else ""
+    e.long_summary = episode.description if episode.description else ""
+    e.media = Media(episode.audio)
+    e.explicit = episode.rating == "Explicit"
+    e.publication_date = timezone.localize(episode.release_date)
 
     return e
