@@ -18,6 +18,15 @@ resource "google_project_iam_binding" "cloud_run_admin" {
   ]
 }
 
+resource "google_project_iam_binding" "service_account_user" {
+  project = var.project_id
+  role    = "roles/iam.serviceAccountUser"
+
+  members = [
+    "serviceAccount:${google_service_account.cloud_run_artifact_sa.email}"
+  ]
+}
+
 resource "google_project_iam_binding" "artifact_registry_reader" {
   project = var.project_id
   role    = "roles/artifactregistry.reader"
