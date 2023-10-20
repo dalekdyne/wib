@@ -1,11 +1,11 @@
 # Use an official Python runtime as a parent image
-FROM python:3.11-bullseye
+FROM python:3.8.11-bullseye
 
 # Set the working directory in the Docker image
 WORKDIR /app
 
 # Copy the requirements.txt file into the container
-COPY services/api/requirements.txt .
+COPY services/auth/requirements.txt .
 
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
@@ -15,7 +15,7 @@ RUN useradd -m appuser && chown -R appuser:appuser /app
 USER appuser
 
 # Copy the entire app folder into the container
-COPY --chown=appuser:appuser services/api/app .
+COPY --chown=appuser:appuser services/auth/app .
 
 # Copy entry script into the container
 COPY --chown=appuser:appuser uvicorn.sh ./entrypoint.sh
