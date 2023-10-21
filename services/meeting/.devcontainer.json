@@ -1,0 +1,21 @@
+{
+    "name": "GetWib Meeting",
+    "dockerComposeFile": [
+        "../../docker-compose.yml"
+    ],
+    "service": "api",
+    "workspaceFolder": "/workspace/services/meeting",
+    "postCreateCommand": [
+        "./postCreateCommand.sh"
+    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python"
+            ]
+        }
+    },
+    "forwardPorts": [
+        8000
+    ]
+}
