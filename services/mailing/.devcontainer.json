@@ -1,0 +1,21 @@
+{
+    "name": "GetWib Mailing",
+    "dockerComposeFile": [
+        "../../docker-compose.yml"
+    ],
+    "service": "mailing",
+    "workspaceFolder": "/workspace/services/mailing",
+    "postCreateCommand": [
+        "./postCreateCommand.sh"
+    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python"
+            ]
+        }
+    },
+    "forwardPorts": [
+        8000
+    ]
+}
