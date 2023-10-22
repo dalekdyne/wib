@@ -1,0 +1,41 @@
+openapi: 3.0.0
+info:
+  title: GCP API Gateway for Cloud Run Services
+  version: 1.0.0
+paths:
+  /api:
+    x-google-backend:
+      address: https://api-cloud-run-url.a.run.app
+      protocol: h2
+    get:
+      summary: API service endpoint
+      responses:
+        '200':
+          description: Successful response from API service
+  /auth:
+    x-google-backend:
+      address: https://auth-cloud-run-url.a.run.app
+      protocol: h2
+    get:
+      summary: Auth service endpoint
+      responses:
+        '200':
+          description: Successful response from Auth service
+  /meeting:
+    x-google-backend:
+      address: https://meeting-cloud-run-url.a.run.app
+      protocol: h2
+    get:
+      summary: Meeting service endpoint
+      responses:
+        '200':
+          description: Successful response from Meeting service
+  /user:
+    x-google-backend:
+      address: https://user-cloud-run-url.a.run.app
+      protocol: h2
+    get:
+      summary: User service endpoint
+      responses:
+        '200':
+          description: Successful response from User service
