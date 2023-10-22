@@ -10,9 +10,7 @@ variable "repositories" {
   default     = [
     "getwib-api",
     "getwib-auth",
-    "getwib-mailing",
     "getwib-meeting",
-    "getwib-studio",
     "getwib-user"
   ]
 }

@@ -1,4 +1,4 @@
-resource "google_cloud_run_service" "getwib_api" {
+resource "google_cloud_run_service" "getwib_auth" {
   name     = var.service_name
   location = var.location
 
