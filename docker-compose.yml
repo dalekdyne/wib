@@ -31,7 +31,7 @@ services:
     ports:
       - 8003:8000
     env_file:
-      - services/mailing/mailing.env
+      - services/meeting/meeting.env
     depends_on:
       - db
   user:
