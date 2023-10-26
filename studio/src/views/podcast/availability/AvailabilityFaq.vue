@@ -79,7 +79,7 @@ export default {
   data() {
     return {
       rssUrl:
-        "https://rss.podbeam.com/feeds/5f9b5b5b-8b8a-4b8a-8b5b-5b5b5b5b5b5b.xml",
+        "https://rss.Wib.com/feeds/5f9b5b5b-8b8a-4b8a-8b5b-5b5b5b5b5b5b.xml",
     };
   },
   methods: {},

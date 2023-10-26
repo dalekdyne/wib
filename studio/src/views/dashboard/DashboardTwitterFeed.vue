@@ -53,7 +53,7 @@ export default {
   },
   props: {
     // See below for data structure
-    // https://github.com/podbeam/studio/blob/main/src/%40fake-db/data/pages/profile-data.js#L56
+    // https://github.com/Wib/studio/blob/main/src/%40fake-db/data/pages/profile-data.js#L56
     twitterFeed: {
       type: Array,
       default: () => {},

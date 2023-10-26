@@ -114,7 +114,7 @@
                   v-model="eventLocal.eventUrl"
                   type="url"
                   :state="getValidationState(validationContext)"
-                  placeholder="htttps://podbeam.io/studio/session/123"
+                  placeholder="htttps://Wib/studio/session/123"
                   trim
                   readonly
                 />

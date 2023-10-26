@@ -1,0 +1,21 @@
+{
+    "name": "GetWib Studio",
+    "dockerComposeFile": [
+        "../docker-compose.yml"
+    ],
+    "service": "studio",
+    "workspaceFolder": "/workspace/studio",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "vue.volar",                       // For Vue.js development
+                "dbaeumer.vscode-eslint",          // For JavaScript linting (ESLint)
+                "esbenp.prettier-vscode",          // For code formatting (Prettier)
+                "ms-vscode.node-debug2"            // For Node.js debugging
+            ]
+        }
+    },
+    "forwardPorts": [
+        3000
+    ]
+}

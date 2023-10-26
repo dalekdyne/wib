@@ -3,8 +3,8 @@
     <b-row class="auth-inner m-0">
       <!-- Brand logo-->
       <b-link class="brand-logo">
-        <podbeam-logo />
-        <h2 class="brand-text text-black ml-1">Podbeam</h2>
+        <Wib-logo />
+        <h2 class="brand-text text-black ml-1">Wib</h2>
       </b-link>
       <!-- /Brand logo-->
 
@@ -22,7 +22,7 @@
       <b-col lg="4" class="d-flex align-items-center auth-bg px-2 p-lg-5">
         <b-col sm="8" md="6" lg="12" class="px-xl-2 mx-auto">
           <b-card-title class="mb-1 font-weight-bold" title-tag="h2">
-            Welcome to Podbeam! 👋
+            Welcome to Wib! 👋
           </b-card-title>
           <b-card-text class="mb-2">
             Please sign-in to your account and start making!
@@ -144,7 +144,7 @@
 <script>
 /* eslint-disable global-require */
 import { ValidationProvider, ValidationObserver } from "vee-validate";
-import PodbeamLogo from "@core/layouts/components/Logo.vue";
+import WibLogo from "@core/layouts/components/Logo.vue";
 import {
   BRow,
   BCol,
@@ -189,7 +189,7 @@ export default {
     BForm,
     BButton,
     BAlert,
-    PodbeamLogo,
+    WibLogo,
     ValidationProvider,
     ValidationObserver,
   },

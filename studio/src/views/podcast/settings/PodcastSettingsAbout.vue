@@ -15,7 +15,7 @@
             id="podcastName"
             :placeholder="
               $t(
-                'Your podcast name is how people will find your podcast, both on Podbeam and on other platforms.'
+                'Your podcast name is how people will find your podcast, both on Wib and on other platforms.'
               )
             "
             v-model="podcastName"

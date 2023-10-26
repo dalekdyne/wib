@@ -45,6 +45,14 @@ services:
       - services/user/user.env
     depends_on:
       - db
+  studio:
+    image: node:16.20.2
+    command: /bin/sh -c "timeout 300 sh -c 'until curl -s db:27017; do sleep 1; done'; while sleep 1000; do :; done"
+    working_dir: /workspace/studio
+    volumes:
+      - .:/workspace:cached
+    ports:
+      - 3000:3000
   db:
     image: mongo:latest
     volumes:

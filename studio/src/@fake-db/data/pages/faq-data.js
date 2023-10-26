@@ -26,7 +26,7 @@ const data = {
         {
           question: 'Can I get a refund?',
           ans:
-            'You can send an email to payments@podbeam.io and let us know the reason for your refund request. We will review your request and get back to you within 24 hours.',
+            'You can send an email to payments@Wib and let us know the reason for your refund request. We will review your request and get back to you within 24 hours.',
         },
       ],
     },
@@ -109,17 +109,17 @@ const data = {
     product: {
       icon: 'PackageIcon',
       title: 'Product',
-      subtitle: 'What is Podbeam?',
+      subtitle: 'What is Wib?',
       qandA: [
         {
-          question: 'What is Podbeam?',
+          question: 'What is Wib?',
           ans:
-            'Podbeam is a video podcasting platform that allows you to record, edit, and publish your podcast. You can also manage your podcast and your audience on Podbeam.',
+            'Wib is a video podcasting platform that allows you to record, edit, and publish your podcast. You can also manage your podcast and your audience on Wib.',
         },
         {
           question: 'What is a video podcast?',
           ans:
-            'A video podcast is a podcast that includes video. You can record a video podcast on Podbeam and publish it on all major podcast platforms such as Apple Podcasts, Google Podcasts, Spotify, and more.',
+            'A video podcast is a podcast that includes video. You can record a video podcast on Wib and publish it on all major podcast platforms such as Apple Podcasts, Google Podcasts, Spotify, and more.',
         },
       ],
     },

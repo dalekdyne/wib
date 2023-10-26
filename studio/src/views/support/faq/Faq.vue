@@ -103,7 +103,7 @@
             <b-avatar size="42" rounded variant="light-primary" class="mb-2">
               <feather-icon icon="MailIcon" size="18" />
             </b-avatar>
-            <h4>hello@podbeam.io</h4>
+            <h4>hello@Wib</h4>
             <span class="text-body">{{
               t("Best way to get an answer fast!")
             }}</span>

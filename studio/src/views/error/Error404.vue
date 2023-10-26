@@ -2,8 +2,8 @@
   <!-- Error page-->
   <div class="misc-wrapper">
     <b-link class="brand-logo">
-      <podbeam-logo />
-      <h2 class="brand-text text-primary ml-1">Podbeam</h2>
+      <Wib-logo />
+      <h2 class="brand-text text-primary ml-1">Wib</h2>
     </b-link>
 
     <div class="misc-inner p-2 p-sm-3">
@@ -30,12 +30,12 @@
 <script>
 /* eslint-disable global-require */
 import { BLink, BButton, BImg } from "bootstrap-vue";
-import PodbeamLogo from "@core/layouts/components/Logo.vue";
+import WibLogo from "@core/layouts/components/Logo.vue";
 import store from "@/store/index";
 
 export default {
   components: {
-    PodbeamLogo,
+    WibLogo,
     BLink,
     BButton,
     BImg,

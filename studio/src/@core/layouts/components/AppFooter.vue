@@ -2,8 +2,8 @@
   <p class="clearfix mb-0">
     <span class="float-md-left d-block d-md-inline-block mt-25">
       Copyright © {{ new Date().getFullYear() }}
-      <b-link class="ml-25" href="https://podbeam.io" target="_blank"
-        >Podbeam, Inc</b-link
+      <b-link class="ml-25" href="https://Wib" target="_blank"
+        >Wib, Inc</b-link
       >
     </span>
 

@@ -3,8 +3,8 @@
     <b-row class="auth-inner m-0">
       <!-- Brand logo-->
       <b-link class="brand-logo">
-        <podbeam-logo />
-        <h2 class="brand-text text-black ml-1">Podbeam</h2>
+        <Wib-logo />
+        <h2 class="brand-text text-black ml-1">Wib</h2>
       </b-link>
       <!-- /Brand logo-->
 
@@ -155,7 +155,7 @@
 <script>
 /* eslint-disable global-require */
 import { ValidationProvider, ValidationObserver } from "vee-validate";
-import PodbeamLogo from "@core/layouts/components/Logo.vue";
+import WibLogo from "@core/layouts/components/Logo.vue";
 import {
   BRow,
   BCol,
@@ -191,7 +191,7 @@ export default {
     BFormInput,
     BInputGroup,
     BInputGroupAppend,
-    PodbeamLogo,
+    WibLogo,
     // validations
     ValidationProvider,
     ValidationObserver,
